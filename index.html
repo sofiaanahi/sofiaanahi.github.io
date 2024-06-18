@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Detector</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .video-container {
+            margin-right: 20px;
+        }
+        .canvas-container {
+            margin-left: 20px;
+        }
+        video, canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <h2>Cámara</h2>
+            <video id="video" width="320" height="240" autoplay></video>
+        </div>
+        <div class="canvas-container">
+            <h2>Detección de mano izquierda</h2>
+            <canvas id="izquierdaCanvas" width="320" height="240"></canvas>
+        </div>
+        <div class="canvas-container">
+            <h2>Detección de mano derecha</h2>
+            <canvas id="derechaCanvas" width="320" height="240"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <script src="script.js"></script>
+</body>
+</html>

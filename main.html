@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo HandPose: Descripción y Implementación</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #6c4675;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        h1, h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        p, ul {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 6px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #6c4675;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 10px; 
+        }
+        .button:hover {
+            background-color: #b49eb8;
+            transform: translateY(-2px);
+        }
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .button2 {
+            display: inline-block;
+            padding: 6px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #6c4675;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+        }
+        .button2:hover {
+            background-color: #b49eb8;
+            transform: translateY(-2px);
+        }
+        .button2:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Modelo HandPose: Descripción y Implementación</h1>
+
+        <h2>1. Repositorio o Sitio</h2>
+        <p>El modelo HandPose se encuentra disponible en el repositorio de TensorFlow.js: <a href=" https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection
+            " target="_blank"> https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection
+        </a></p>
+
+        <h2>2. Objetivo de la Utilización</h2>
+        <p>Detectar y rastrear la posición de manos y dedos en tiempo real de videos en el navegador para aplicaciones de interacción gestual, realidad aumentada y control sin contacto.</p>
+
+        <h2>3. Datos Particulares</h2>
+        <ul>
+            <li><strong>Creadores:</strong> Equipo de Google Research</li>
+            <li><strong>Fecha de Creación:</strong> Diciembre de 2019</li>
+            <li><strong>Versión:</strong> Adaptación para ejecución en navegador</li>
+        </ul>
+
+        <h2>5. Problemas y Soluciones</h2>
+        <ul>
+            <li><strong>Error de carga del modelo:</strong> Solucionado asegurando compatibilidad con TensorFlow.js.</li>
+            <li><strong>Problemas con la visualización de la cámara:</strong> Ajustes en permisos y configuración de la cámara.</li>
+            <li><strong>Detección de dos manos:</strong> Solo se puede detectar una mano a la vez por ahora.</li>
+            <li><strong>Compatibilidad con navegadores:</strong> Verificar compatibilidad y la velocidad de reacción del modelo.</li>
+            <li><strong>Tiempo de carga:</strong> Optimización del código y configuración de red mejoraron tiempos.</li>
+        </ul>
+
+        <h2>6. Implementación del Modelo</h2>
+        <p>Para ver la implementación del modelo en acción, haga clic en uno de los botones de abajo:</p>
+        <p>El modelo 1 solo puede detectar una mano a la vez, ya sea la izquierda o la derecha.</p>
+        <a class="button" href="index.html">Ver Modelo 1</a>
+        <p>En el modelo 2, se detectan tanto la mano izquierda como la derecha, sin embargo, una de ellas permanece estática mientras que la otra continúa en movimiento.</p>
+        <a class= "button2" href="index2.html">ver modelo 2</a>
+    </div>
+</body>
+</html>

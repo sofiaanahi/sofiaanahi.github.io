@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Detector</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .video-container {
+            margin-right: 20px;
+        }
+        .canvas-container {
+            margin-left: 20px;
+        }
+        video, canvas {
+            border: 1px solid rgb(254, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <h2>Cámara</h2>
+            <video id="video" width="320" height="240" autoplay></video>
+        </div>
+        <div class="canvas-container">
+            <h2>Detección de mano izquierda</h2>
+            <canvas id="izquierdaCanvas" width="320" height="240"></canvas>
+        </div>
+        <div class="canvas-container">
+            <h2>Detección de mano derecha</h2>
+            <canvas id="derechaCanvas" width="320" height="240"></canvas>
+        </div>
+        <div>
+            <img id="chocaLos5Image" src="palmas.jpg" alt="Choca los 5" style="display: none;">
+            <p id="p_chocalas" style="display: none;">Palmas</p>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
